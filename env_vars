@@ -1,0 +1,4 @@
+
+TOPOLOGY_FILE=etc/topology.json
+BIND_DN=cn=administrator
+BIND_PASSWORD_FILE=etc/bind-pwd

@@ -1,0 +1,37 @@
+. ${STAGING_DIR}/hooks/pingcommon.lib.sh
+
+TOOL_ZIP=dsreplication-timing.zip
+TOOL_URL="https://bits.pingidentity.com/tools/${TOOL_ZIP}"
+DATE="$(date)"
+
+cd ${SERVER_ROOT_DIR}
+
+TOPOLOGY_FILE_VALIDATION="true"
+BIND_DN_VALIDATION="true|(i.e. cn=administrator)|DN to bind with perfomrming tests"
+BIND_PASSWORD_FILE_VALIDATION="true|(i.e. /opt/secrets/pwd)|Password for BIND DN"
+
+
+echo_header "pingdirectory-replication-timing"
+echo_vars DATE TOOL_ZIP TOOL_URL PING_IDENTITY_DEVOPS_USER PING_IDENTITY_DEVOPS_KEY TOPOLOGY_FILE BIND_DN BIND_PASSWORD_FILE
+
+echo_header "Downloading ${TOOL_ZIP}"
+
+
+if test ! -z "${TOOL_URL}" ; then
+    curl --request GET "${TOOL_URL}" \
+        --header "devops-user: ${PING_IDENTITY_DEVOPS_USER}" \
+        --header "devops-key: ${PING_IDENTITY_DEVOPS_KEY}" \
+        --header 'devops-app: pingtoolkit' \
+        --header 'devops-purpose: pulling-tool' \
+        -o ${TOOL_ZIP} 2> /dev/null
+fi
+
+#test ! -f ${TOOL_ZIP} && echo_red "Unable to download"
+#
+#unzip -q ${TOOL_ZIP}
+
+./dsreplication-timing \
+        --topologyFilePath "${TOPOLOGY_FILE}" \
+        --timingBaseDN "${BASE_DN}" \
+        --bindDN "${BIND_DN}" \
+        --bindPasswordFile "${BIND_PASSWORD_FILE}"
