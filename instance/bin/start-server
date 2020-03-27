@@ -26,9 +26,9 @@ if test ! -z "${TOOL_URL}" ; then
         -o ${TOOL_ZIP} 2> /dev/null
 fi
 
-#test ! -f ${TOOL_ZIP} && echo_red "Unable to download"
-#
-#unzip -q ${TOOL_ZIP}
+test ! -f ${TOOL_ZIP} && echo_red "Unable to download"
+
+unzip -q ${TOOL_ZIP}
 
 ./dsreplication-timing \
         --topologyFilePath "${TOPOLOGY_FILE}" \
