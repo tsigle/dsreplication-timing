@@ -7,12 +7,13 @@ DATE="$(date)"
 cd ${SERVER_ROOT_DIR}
 
 TOPOLOGY_FILE_VALIDATION="true"
+BASE_DN_VALIDATION="true|(i.e. ou=dsreplication-timing,dc=example,dc=com)|BASE DN to place replication timing info"
 BIND_DN_VALIDATION="true|(i.e. cn=administrator)|DN to bind with perfomrming tests"
 BIND_PASSWORD_FILE_VALIDATION="true|(i.e. /opt/secrets/pwd)|Password for BIND DN"
 
 
 echo_header "pingdirectory-replication-timing"
-echo_vars DATE TOOL_ZIP TOOL_URL PING_IDENTITY_DEVOPS_USER PING_IDENTITY_DEVOPS_KEY TOPOLOGY_FILE BIND_DN BIND_PASSWORD_FILE
+echo_vars DATE TOOL_ZIP TOOL_URL PING_IDENTITY_DEVOPS_USER PING_IDENTITY_DEVOPS_KEY TOPOLOGY_FILE BASE_DN BIND_DN BIND_PASSWORD_FILE
 
 echo_header "Downloading ${TOOL_ZIP}"
 
