@@ -17,6 +17,14 @@ echo_vars DATE TOOL_ZIP TOOL_URL PING_IDENTITY_DEVOPS_USER PING_IDENTITY_DEVOPS_
 
 echo_header "Downloading ${TOOL_ZIP}"
 
+# If there are validations that have failed, then exit
+if test "${_validationFailed}" = true ; then
+    echo_red "Please resolve the validation issues!"
+    exit 1
+else
+    echo ""
+fi
+
 
 if test ! -z "${TOOL_URL}" ; then
     curl --request GET "${TOOL_URL}" \
