@@ -6,7 +6,6 @@
     "ldapPort" : 389,
     "ldapsPort" : 636,
     "replicationPort" : 8989,
-    "replicationServerID" : 14920,
     "startTLSEnabled" : true,
     "preferredSecurity" : "SSL",
     "product" : "DIRECTORY"
@@ -17,7 +16,6 @@
     "ldapPort" : 389,
     "ldapsPort" : 636,
     "replicationPort" : 8989,
-    "replicationServerID" : 5836,
     "startTLSEnabled" : true,
     "preferredSecurity" : "SSL",
     "product" : "DIRECTORY"
@@ -28,7 +26,6 @@
     "ldapPort" : 389,
     "ldapsPort" : 636,
     "replicationPort" : 8989,
-    "replicationServerID" : 5836,
     "startTLSEnabled" : true,
     "preferredSecurity" : "SSL",
     "product" : "DIRECTORY"
@@ -39,7 +36,6 @@
     "ldapPort" : 389,
     "ldapsPort" : 636,
     "replicationPort" : 8989,
-    "replicationServerID" : 5836,
     "startTLSEnabled" : true,
     "preferredSecurity" : "SSL",
     "product" : "DIRECTORY"
