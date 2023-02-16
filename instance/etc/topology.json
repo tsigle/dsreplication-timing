@@ -1,43 +1,105 @@
 {
-  "serverInstances" : [ {
-    "instanceName" : "pingdirectory-0.pingdirectory",
-    "hostname" : "pingdirectory-0.pingdirectory",
-    "location" : "Docker",
-    "ldapPort" : 389,
-    "ldapsPort" : 636,
-    "replicationPort" : 8989,
-    "startTLSEnabled" : true,
-    "preferredSecurity" : "SSL",
-    "product" : "DIRECTORY"
-  }, {
-    "instanceName" : "pingdirectory-1.pingdirectory",
-    "hostname" : "pingdirectory-1.pingdirectory",
-    "location" : "Docker",
-    "ldapPort" : 389,
-    "ldapsPort" : 636,
-    "replicationPort" : 8989,
-    "startTLSEnabled" : true,
-    "preferredSecurity" : "SSL",
-    "product" : "DIRECTORY"
-  }, {
-    "instanceName" : "pingdirectory-2.pingdirectory",
-    "hostname" : "pingdirectory-2.pingdirectory",
-    "location" : "Docker",
-    "ldapPort" : 389,
-    "ldapsPort" : 636,
-    "replicationPort" : 8989,
-    "startTLSEnabled" : true,
-    "preferredSecurity" : "SSL",
-    "product" : "DIRECTORY"
-  }, {
-    "instanceName" : "pingdirectory-3.pingdirectory",
-    "hostname" : "pingdirectory-3.pingdirectory",
-    "location" : "Docker",
-    "ldapPort" : 389,
-    "ldapsPort" : 636,
-    "replicationPort" : 8989,
-    "startTLSEnabled" : true,
-    "preferredSecurity" : "SSL",
-    "product" : "DIRECTORY"
-  } ]
+  "serverInstances": [
+    {
+      "instanceName": "pdtesting-pingdirectory-0.eur",
+      "hostname": "pdtesting-pingdirectory-0.eur.ping-multi-cluster.com",
+      "location": "eur",
+      "ldapPort": 1389,
+      "ldapsPort": 1636,
+      "replicationPort": 8989,
+      "replicationServerID": 23724,
+      "startTLSEnabled": true,
+      "preferredSecurity": "SSL",
+      "product": "DIRECTORY"
+    },
+    {
+      "instanceName": "pdtesting-pingdirectory-0.usa",
+      "hostname": "pdtesting-pingdirectory-0.usa.ping-multi-cluster.com",
+      "location": "usa",
+      "ldapPort": 1389,
+      "ldapsPort": 1636,
+      "replicationPort": 8989,
+      "replicationServerID": 30520,
+      "startTLSEnabled": true,
+      "preferredSecurity": "SSL",
+      "product": "DIRECTORY"
+    },
+    {
+      "instanceName": "pdtesting-pingdirectory-1.eur",
+      "hostname": "pdtesting-pingdirectory-1.eur.ping-multi-cluster.com",
+      "location": "eur",
+      "ldapPort": 1389,
+      "ldapsPort": 1636,
+      "replicationPort": 8989,
+      "replicationServerID": 2764,
+      "startTLSEnabled": true,
+      "preferredSecurity": "SSL",
+      "product": "DIRECTORY"
+    },
+    {
+      "instanceName": "pdtesting-pingdirectory-1.usa",
+      "hostname": "pdtesting-pingdirectory-1.usa.ping-multi-cluster.com",
+      "location": "usa",
+      "ldapPort": 1389,
+      "ldapsPort": 1636,
+      "replicationPort": 8989,
+      "replicationServerID": 30750,
+      "startTLSEnabled": true,
+      "preferredSecurity": "SSL",
+      "product": "DIRECTORY"
+    }
+  ]
+}PingDirectory:pdtesting-pingdirectory-0:/opt/server/bin
+> cat /opt/out/new-topology.json
+{
+  "serverInstances": [
+    {
+      "instanceName": "pdtesting-pingdirectory-0.eur",
+      "hostname": "pdtesting-pingdirectory-0.eur.ping-multi-cluster.com",
+      "location": "eur",
+      "ldapPort": 1389,
+      "ldapsPort": 1636,
+      "replicationPort": 8989,
+      "replicationServerID": 23724,
+      "startTLSEnabled": true,
+      "preferredSecurity": "SSL",
+      "product": "DIRECTORY"
+    },
+    {
+      "instanceName": "pdtesting-pingdirectory-0.usa",
+      "hostname": "pdtesting-pingdirectory-0.usa.ping-multi-cluster.com",
+      "location": "usa",
+      "ldapPort": 1389,
+      "ldapsPort": 1636,
+      "replicationPort": 8989,
+      "replicationServerID": 30520,
+      "startTLSEnabled": true,
+      "preferredSecurity": "SSL",
+      "product": "DIRECTORY"
+    },
+    {
+      "instanceName": "pdtesting-pingdirectory-1.eur",
+      "hostname": "pdtesting-pingdirectory-1.eur.ping-multi-cluster.com",
+      "location": "eur",
+      "ldapPort": 1389,
+      "ldapsPort": 1636,
+      "replicationPort": 8989,
+      "replicationServerID": 2764,
+      "startTLSEnabled": true,
+      "preferredSecurity": "SSL",
+      "product": "DIRECTORY"
+    },
+    {
+      "instanceName": "pdtesting-pingdirectory-1.usa",
+      "hostname": "pdtesting-pingdirectory-1.usa.ping-multi-cluster.com",
+      "location": "usa",
+      "ldapPort": 1389,
+      "ldapsPort": 1636,
+      "replicationPort": 8989,
+      "replicationServerID": 30750,
+      "startTLSEnabled": true,
+      "preferredSecurity": "SSL",
+      "product": "DIRECTORY"
+    }
+  ]
 }
