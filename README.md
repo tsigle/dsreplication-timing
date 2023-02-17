@@ -1,4 +1,4 @@
-# dsreplicaiton-timing Tool
+# dsreplication-timing Tool
 
 ```
 Providing basic replication timing between multiple Ping Directory servers in
